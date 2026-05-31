@@ -69,7 +69,7 @@ export default defineConfig({
       {
         text: '软件工具',
         items: [
-          { text: '编程工具', link: '/tool/code/eclipse' },
+          { text: '编程工具', link: '/tool/code/Eclipse' },
           { text: 'widows软件', link: '/getting-started' },
         ]
       },
