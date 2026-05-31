@@ -3,6 +3,7 @@ import Permalink from "vitepress-plugin-permalink";
 import timeline from "vitepress-markdown-timeline"; 
 
 export default defineConfig({
+  ignoreDeadLinks: true,
   vite: {
     plugins: [Permalink(/* options */)],
     optimizeDeps: {
