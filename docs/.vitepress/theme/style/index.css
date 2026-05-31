@@ -1,0 +1,108 @@
+/* --- 亮色模式 (Light Mode) --- */
+:root {
+  /* 品牌主色调（按钮、链接、高亮等） */
+  --vp-c-brand-1: #3eaf7c; 
+  --vp-c-brand-2: #4ab88a;
+  
+  /* 页面背景色 */
+  --vp-c-bg: #f6f6f7;
+
+   /* 1. 设置一个统一的边框颜色变量 (浅灰色) */
+  --vp-c-divider-custom: #e2e2e3;
+
+  /* 2. 覆盖顶部导航栏底部的边框 */
+  .VPNav {
+    border-bottom: 1px solid var(--vp-c-divider-custom);
+  }
+
+  /* 3. 覆盖左侧侧边栏右侧的边框 */
+  .VPSidebar {
+    border-right: 1px solid var(--vp-c-divider-custom);
+  }
+  
+  /* 文字颜色 --vp-c-text-1: #2c3e50;*/
+  
+}
+
+/* --- 暗色模式 (Dark Mode) --- */
+.dark {
+  /* 暗色模式下的品牌色（通常更亮一些以保证对比度） */
+  --vp-c-brand-1: #42b983;
+  
+  /* 暗色模式下的页面背景色 */
+  --vp-c-bg: #22272e;
+
+    /* 2. 【关键】左侧边栏背景色 - 这是你没改的部分 */
+  --vp-sidebar-bg-color: #22272e;
+
+  --vp-nav-bg-color: #22272e;
+
+  /* 1. 定义暗色模式下的统一边框颜色 */
+  --vp-c-divider-custom: #2e2e32;
+
+  /* 确保顶栏内部的遮罩层不会挡住边框（可选，视情况而定） */
+  .VPNavBar.has-sidebar .divider {
+    display: none !important; /* 隐藏默认的内部遮罩线，使用我们自定义的边框 */
+  }
+  
+  /* 暗色模式下的文字颜色--vp-c-text-1: #f0f0f0; */
+  
+}
+
+.tagline{max-width: none !important;margin-top: -10% !important;}
+.heading{display: none !important;}
+
+/*====================================代码块样式===================*/
+
+/* 代码块：增加留空边距 增加阴影 */
+.vp-doc div[class*=language-] {
+  box-shadow: 0 10px 30px 0 rgb(0 0 0 / 40%);
+  padding-top: 20px;
+}
+
+/* 代码块：添加macOS风格的小圆点 */
+.vp-doc div[class*=language-]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 12px;
+  height: 12px;
+  background-color: #ff5f56;
+  border-radius: 50%;
+  box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+  z-index: 1;
+}
+
+/* 代码块：下移行号 隐藏右侧竖线 */
+.vp-doc .line-numbers-wrapper {
+  padding-top: 40px;
+  border-right: none;
+}
+
+/* 代码块：重建行号右侧竖线 */
+.vp-doc .line-numbers-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: 0;
+  border-right: 1px solid var(--vp-code-block-divider-color);
+  height: calc(100% - 60px);
+}
+
+.vp-doc div[class*='language-'].line-numbers-mode {
+  margin-bottom: 20px;
+}
+
+
+
+/* 图片缩放插件*/
+
+.medium-zoom-overlay {
+  z-index: 30;
+}
+
+.medium-zoom-image {
+  z-index: 9999 !important;/* 给的值是21，但是实测盖不住，直接999 */
+}
