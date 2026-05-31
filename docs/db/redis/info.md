@@ -7,7 +7,6 @@ permalink: /redisinfo
 
 作者：安特雷兹(antirez)
 * Antirez个人github：github.com/antirez
-* Antirez个人博客：[antirez.com/latest/0](antirez.com/latest/0)
 
 几个用来学习 Redis 文章地址
 * 官网地址:https://redis.io/
