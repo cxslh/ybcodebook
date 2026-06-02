@@ -1,6 +1,8 @@
 import { defineConfig } from 'vitepress'
-import Permalink from "vitepress-plugin-permalink";
-import timeline from "vitepress-markdown-timeline"; 
+import Permalink from "vitepress-plugin-permalink"
+import timeline from "vitepress-markdown-timeline" 
+import { getSidebar } from './sidebar.mts' 
+
 
 export default defineConfig({
   ignoreDeadLinks: true,
@@ -10,6 +12,7 @@ export default defineConfig({
       include: ['recaptcha-v3']
     } 
   },
+  appearance: 'dark',
   lang: 'zh-CN', //语言，可选 en-US
   title: "程序员一博",
   description: "java文章、AI文章、网站导航、编程项目",
@@ -23,7 +26,7 @@ export default defineConfig({
         text: 'java',
         items: [
           {
-            text: 'java基础', link: '/java/javabase/installjdk',
+            text: 'java基础', link: '/java/javabase/1-installjdk',
           },
           {
             text: 'java进阶', link: '/java/advanced/classlib',
@@ -40,6 +43,7 @@ export default defineConfig({
           {
             text: '框架',
             items: [
+              {text: 'SpringBoot', link: '/java/javaframework/boot/info'},
             ],
           },
           {
@@ -80,21 +84,7 @@ export default defineConfig({
     }, 
     sidebar: {
 
-      '/java/javabase': [
-        {
-          items: [
-              { text: '安装jdk', link: '/java/javabase/installjdk' },
-              { text: '48个关键字及2个保留字', link: '/java/javabase/javakey' },
-              { text: '如何计算代码执行耗时', link: '/java/javabase/codetime' }, 
-              { text: 'java如何写注释', link: '/java/javabase/comment' },
-              { text: 'Java Pojo之间的转换(1)', link: '/java/javabase/javapojocovertone' },
-              { text: 'java中的VO、DAO、BO、PO、DO、DTO', link: '/java/javabase/pojo' },
-              { text: '序列化(1)', link: '/java/javabase/serializable' },
-              { text: '序列化(2)', link: '/java/javabase/serializable2' }, 
-              { text: '序列化(3)', link: '/java/javabase/serializable3' },
-          ],
-        },
-      ],
+      '/java/javabase': [{ items: getSidebar('docs/java/javabase', '/java/javabase') }],
       '/java/devnotes': [
         {
           items: [
