@@ -1,6 +1,6 @@
+import type { EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 
-import MNavLinks from './components/MNavLinks.vue'
 
 import './style/index.css'
 import "vitepress-markdown-timeline/dist/theme/index.css";
@@ -9,15 +9,14 @@ import mediumZoom from 'medium-zoom';
 import { onMounted, watch, nextTick } from 'vue';
 import { useRoute } from 'vitepress';
 
-import { h } from 'vue'
-import { useData } from 'vitepress'
+// .vitepress/theme/index.ts
+import {Links } from '@theojs/lumen'
 
 export default {
   extends: DefaultTheme,
 
-enhanceApp({app}) {
-    // 注册组件
-    app.component('MNavLinks' , MNavLinks)
+  enhanceApp: ({ app }: EnhanceAppContext) => {
+    app.component('Links', Links) 
   },
   setup() {
     const route = useRoute();
@@ -32,17 +31,5 @@ enhanceApp({app}) {
       () => route.path,
       () => nextTick(() => initZoom())
     );
-  },
-  Layout: () => {
-    const props: Record<string, any> = {}
-    // 获取 frontmatter
-    const { frontmatter } = useData()
-
-    /* 添加自定义 class */
-    if (frontmatter.value?.layoutClass) {
-      props.class = frontmatter.value.layoutClass
-    }
-
-    return h(DefaultTheme.Layout, props)
   },
 }

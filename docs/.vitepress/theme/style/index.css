@@ -106,3 +106,37 @@
 .medium-zoom-image {
   z-index: 9999 !important;/* 给的值是21，但是实测盖不住，直接999 */
 }
+
+.custom-page-class {
+}
+
+/* 针对设置了 site-nav-page 类名的页面生效 */
+.site-nav-page {
+  /* 1. 让正文内容区域撑满，不再受默认的 688px 限制 */
+  --vp-doc-width: 100%;
+}
+
+/* 调整 VitePress 底层 Grid 布局，让内容靠左，大纲靠右 */
+.site-nav-page .VPDoc .container {
+  max-width: 80% !important;
+  justify-content: flex-start !important;
+}
+
+.site-nav-page .VPDoc .content {
+  max-width: 100% !important;
+  flex: 1; /* 让正文占据剩余空间 */
+}
+
+.site-nav-page .VPDoc .content-container {
+  max-width: 100% !important;
+}
+
+/* 确保右侧大纲（Aside）正常显示并固定在右侧 */
+.site-nav-page .VPDoc .aside {
+  order: 2;
+  flex-shrink: 0;
+}
+
+.site-nav-page .lm-link no-icon link{
+  margin: 5px !important;
+}

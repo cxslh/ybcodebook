@@ -4,9 +4,8 @@ permalink: /wztimeline
 ---
 
 ::: timeline 2026-05-01
-- 网站由vuepress切换到vitepress
+  - 网站由vuepress切换到vitepress
   - 增加网站导航功能
-- 《深入浅出webpack》 http://webpack.wuhaolin.cn/
 :::
 
 ::: timeline 2019-05
