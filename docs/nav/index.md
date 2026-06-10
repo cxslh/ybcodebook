@@ -117,6 +117,7 @@ pageClass: site-nav-page
   ]"
 />
 
+
 ### 图片处理
 
 <Links
@@ -266,6 +267,58 @@ pageClass: site-nav-page
       name: '逗比拯救世界',
       desc: '专业的表情包搜索网站',
       link: 'https://www.dbbqb.com/'
+    }
+  ]"
+/>
+
+## 网盘工具
+<Links
+  :grid="6"
+  :items="[
+    {
+      name: 'OpenList',
+      desc: '一个支持多种存储的文件列表程序，使用 Gin 和 SolidJS',
+      link: 'https://doc.oplist.org/'
+    },
+    {
+      name: '百度网盘',
+      desc: '百度产品，提供云备份、预览、分享等服务',
+      link: 'https://pan.baidu.com/'
+    },
+    {
+      name: '阿里云盘',
+      desc: '阿里产品，速度快、不打扰、够安全、易于分享的网盘',
+      link: 'https://www.alipan.com/'
+    },
+    {
+      name: '123云盘',
+      desc: '不用登录就能下载的云盘',
+      link: 'https://www.123pan.com/'
+    },
+    {
+      name: '天翼云盘',
+      desc: '闪传、不限速的云盘',
+      link: 'https://cloud.189.cn/web/login.html'
+    },
+    {
+      name: '小飞机网盘',
+      desc: '上传下载不限速',
+      link: 'https://www.feijipan.com/'
+    },
+    {
+      name: '文叔叔',
+      desc: '简单 2 步，极速传文件给他人',
+      link: 'https://www.wenshushu.cn/'
+    },
+    {
+      name: '爱传送',
+      desc: '文件传送、剪贴板同步和文件管理工具',
+      link: 'https://mfiles.maokebing.com/index.html'
+    },
+    {
+      name: 'airportal',
+      desc: '空投快传，使用发件码可以在公共设备上不用登录账号就能发送文件',
+      link: 'https://mfiles.maokebing.com/index.html'
     }
   ]"
 />
