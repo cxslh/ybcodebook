@@ -943,11 +943,6 @@ pageClass: site-nav-page
       name: 'befonts',
       desc: '免费英文字体',
       link: 'https://befonts.com/'
-    },
-    {
-      name: '犬神志',
-      desc: '个人公众号-字体分享',
-      link: 'https://mp.weixin.qq.com/s/sBj2Dnmf8AynVCDWmGn57w'
     }
 ]"
 />

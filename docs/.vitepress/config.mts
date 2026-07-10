@@ -74,7 +74,7 @@ export default defineConfig({
         text: '软件工具',
         items: [
           { text: '编程工具', link: '/tool/code/Eclipse' },
-          { text: 'widows软件', link: '/getting-started' },
+          { text: 'widows软件', link: '/tool/windows/index' },
         ]
       },
       { text: '关于', link: '/about/about' },
@@ -146,8 +146,7 @@ export default defineConfig({
       '/tool/windows/': [
         {
           items: [
-            { text: 'Eclipse', link: '/tool/code/Eclipse' },
-            { text: 'Idea', link: '/tool/code/Idea' },
+            { text: 'windows', link: '/tool/windows/index' }
           ],
         },
       ],
