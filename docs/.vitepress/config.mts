@@ -64,6 +64,20 @@ export default defineConfig({
         ],
       },
       {
+        text: 'AI',
+        items: [
+          {
+            text: 'AI基础', link: '/ai/aibase/index',
+          },
+          {
+            text: 'AI智能体', link: '/java/utils/StringUtil',
+          },
+          {
+            text: 'Skills', link: '/java/utils/StringUtil',
+          }
+        ],
+      },
+      {
         text: '数据库',
         items: [
           { text: 'mysql', link: '/db/mysql' },
