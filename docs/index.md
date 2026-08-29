@@ -20,6 +20,8 @@ pageClass: yb-home-page
   <aside class="yb-home-right">
     <div class="yb-latest-title">最新文章</div>
     <ul class="yb-latest-list">
+  
+  <li><span class="yb-date">2026-08-29</span><span class="yb-sep">-</span><a href="/fesodexcel">Apache Fesod：FastExcel工具库的迭代演进</a></li>
       <li><span class="yb-date">2026-08-21</span><span class="yb-sep">-</span><a href="/java/devnotes/javacoden">代码生成器</a></li>
       <li><span class="yb-date">2026-08-12</span><span class="yb-sep">-</span><a href="/java/javaframework/boot/Springbootvalidparam">SpringBoot 如何校验参数</a></li>
       <li><span class="yb-date">2026-07-30</span><span class="yb-sep">-</span><a href="/java/javabase/javapojocovertone">Java Pojo 之间的转换(1)</a></li>
@@ -29,7 +31,6 @@ pageClass: yb-home-page
       <li><span class="yb-date">2026-06-10</span><span class="yb-sep">-</span><a href="/db/redis/basetype">Redis 五大基本数据类型</a></li>
       <li><span class="yb-date">2026-05-28</span><span class="yb-sep">-</span><a href="/java/javabase/javakey">48 个关键字及 2 个保留字</a></li>
       <li><span class="yb-date">2026-05-15</span><span class="yb-sep">-</span><a href="/java/utils/BigDecimal">BigDecimal 工具类</a></li>
-      <li><span class="yb-date">2026-04-30</span><span class="yb-sep">-</span><a href="/java/javabase/1-installjdk">JDK 下载与安装</a></li>
     </ul>
     <div class="yb-more">
       <a href="/timeline">更多文章 →</a>
@@ -48,9 +49,9 @@ pageClass: yb-home-page
 
 .yb-home {
   display: flex;
-  gap: 48px;
-  align-items: flex-start;
-  padding: 28px 0 20px;
+  gap: 56px;
+  align-items: center;
+  padding: 24px 0 20px;
 }
 
 /* ---- 左侧：站点介绍 ---- */
@@ -60,27 +61,29 @@ pageClass: yb-home-page
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 16px 0;
 }
 
 .yb-home .yb-logo {
-  width: 112px;
-  height: 112px;
-  border-radius: 24px;
+  width: 136px;
+  height: 136px;
+  border-radius: 26px;
 }
 
 .yb-home .yb-title {
-  margin: 32px 0 22px;
-  font-size: 34px;
+  margin: 24px 0 16px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 1.25;
 }
 
 .yb-home .yb-slogan {
-  max-width: 560px;
-  margin: 0 0 32px;
-  font-size: 15px;
-  line-height: 2;
+  max-width: 480px;
+  margin: 0 0 24px;
+  font-size: 14.5px;
+  line-height: 1.9;
   color: var(--vp-c-text-2);
 }
 
@@ -88,10 +91,12 @@ pageClass: yb-home-page
   display: inline-flex;
   align-items: center;
   margin: 0;
-  padding: 9px 20px;
+  padding: 8px 18px;
   border-radius: 999px;
   font-size: 13px;
   color: var(--vp-c-brand-1);
+  background-color: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
 }
 
 /* ---- 右侧：最新文章 ---- */
